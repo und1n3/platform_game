@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bam60c8hsdgh5"]
+
+[ext_resource type="PackedScene" uid="uid://cmxhnjguclpok" path="res://models/caixa_fusta.blend" id="1_ebdcw"]
+[ext_resource type="Script" path="res://scenes/floating_text.gd" id="2_4k1qo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26x53"]
+vertex_color_use_as_albedo = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5juqh"]
+material = SubResource("StandardMaterial3D_26x53")
+font_size = 32
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0elbw"]
+
+[node name="Box" type="StaticBody3D"]
+script = ExtResource("2_4k1qo")
+
+[node name="Model" parent="." instance=ExtResource("1_ebdcw")]
+
+[node name="Text" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 3.48186, 0)
+mesh = SubResource("TextMesh_5juqh")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.04545, 0)
+shape = SubResource("BoxShape3D_0elbw")
