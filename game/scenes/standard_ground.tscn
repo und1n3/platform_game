@@ -22,7 +22,7 @@ mesh = SubResource("BoxMesh_opo21")
 transform = Transform3D(-0.899276, 0.425182, -0.102587, -0.311974, -0.459146, 0.831779, 0.306555, 0.780003, 0.545545, 0, 19.5886, 24.8238)
 shadow_enabled = true
 
-[node name="CameraPivot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.31832, 24.9804)
-
-[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.70528, -0.347993, 0.617642, 0, 0.871232, 0.490872, -0.708929, -0.346202, 0.614462, 106.95, 88.062, 110.466)
+projection = 1
+size = 46.7994
