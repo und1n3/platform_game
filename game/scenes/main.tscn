@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://kl7nyct0bb40"]
+[gd_scene load_steps=4 format=3 uid="uid://kl7nyct0bb40"]
 
 [ext_resource type="PackedScene" uid="uid://dv8jauikmgxlx" path="res://scenes/player1.tscn" id="1_jw7ve"]
-[ext_resource type="PackedScene" uid="uid://c7qjrqplnurf5" path="res://scenes/standard_ground.tscn" id="2_j1pe8"]
+[ext_resource type="PackedScene" path="res://scenes/standard_ground.tscn" id="2_j1pe8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44s28"]
+size = Vector3(1, 1, 2.63794)
 
 [node name="Main" type="Node3D"]
 
 [node name="Player1" parent="." instance=ExtResource("1_jw7ve")]
 
 [node name="StandardGround" parent="." instance=ExtResource("2_j1pe8")]
+
+[node name="DeadZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.8281, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeadZone"]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -596.531, 6.28101)
+shape = SubResource("BoxShape3D_44s28")

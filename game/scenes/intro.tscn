@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://2kksws33nq51"]
+[gd_scene load_steps=4 format=3 uid="uid://cy0h3eo51811k"]
 
 [ext_resource type="PackedScene" uid="uid://kl7nyct0bb40" path="res://scenes/main.tscn" id="1_3wsy4"]
-[ext_resource type="PackedScene" path="res://scenes/box.tscn" id="2_k0n6h"]
+[ext_resource type="PackedScene" uid="uid://bam60c8hsdgh5" path="res://scenes/box.tscn" id="2_k0n6h"]
+[ext_resource type="PackedScene" uid="uid://brknqrm50hjqg" path="res://scenes/lvl1/lvl1.tscn" id="3_a3ap6"]
 
 [node name="Intro" type="Node3D"]
 
@@ -10,4 +11,4 @@
 [node name="Box" parent="." instance=ExtResource("2_k0n6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.78148)
 text = "Start!"
-level_file = ExtResource("1_3wsy4")
+level_file = ExtResource("3_a3ap6")
