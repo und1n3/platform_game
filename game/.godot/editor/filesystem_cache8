@@ -1,9 +1,3 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713609332
-icon.svg::CompressedTexture2D::2861463542180993178::1713607738::1713607742::1::::<><>::
-::res://models/::1713609424
-caixa_fusta.blend::PackedScene::5663036896546903578::1713608600::1713608602::1::::<><>::
-chara_edit.blend::PackedScene::5283306872491070912::1713609424::1713609429::1::::<><>::
-yellow.blend::PackedScene::8743213620007812119::1713608484::1713608535::1::::<><>::
-::res://scenes/::1713609371
-test.tscn::PackedScene::8740529534033880521::1713609371::0::1::::<><>::uid://cmxhnjguclpok::::res://models/caixa_fusta.blend<>uid://chjjj65eqyhoi::::res://models/chara_edit.blend<>uid://dwtjpljblyq1t::::res://models/yellow.blend
+::res://::1713609734
+icon.svg::CompressedTexture2D::5767871699087099002::1713609731::1713609734::1::::<><>::
