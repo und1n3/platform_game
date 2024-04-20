@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwr8iksu3flfl"]
+
+[ext_resource type="PackedScene" uid="uid://cmxhnjguclpok" path="res://models/caixa_fusta.blend" id="1_lxbs0"]
+[ext_resource type="PackedScene" uid="uid://chjjj65eqyhoi" path="res://models/chara_edit.blend" id="2_e18sf"]
+[ext_resource type="PackedScene" uid="uid://dwtjpljblyq1t" path="res://models/yellow.blend" id="3_2cohb"]
+
+[node name="Test" type="Node3D"]
+
+[node name="caixa_fusta" parent="." instance=ExtResource("1_lxbs0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6158, 0, -0.942372)
+
+[node name="chara_edit" parent="." instance=ExtResource("2_e18sf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351581, -1.19209e-07, -0.00605154)
+
+[node name="yellow" parent="." instance=ExtResource("3_2cohb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28371, 0, 0.0787292)
