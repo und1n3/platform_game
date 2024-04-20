@@ -1,10 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7qjrqplnurf5"]
+[gd_scene load_steps=8 format=3 uid="uid://c7qjrqplnurf5"]
+
+[ext_resource type="Texture2D" uid="uid://od7u7en5ffmy" path="res://textures/coast_sand_rocks_02_diff_1k.jpg" id="1_fqeli"]
+[ext_resource type="Texture2D" uid="uid://tc2ls8wyyx46" path="res://textures/water1.jpg" id="2_6eq3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i13yw"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hkp6"]
+albedo_color = Color(0.468856, 0.587545, 0.398236, 1)
+albedo_texture = ExtResource("1_fqeli")
+uv1_scale = Vector3(10, 10, 10)
+
 [sub_resource type="BoxMesh" id="BoxMesh_opo21"]
+material = SubResource("StandardMaterial3D_3hkp6")
 size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j2c6"]
+albedo_color = Color(0, 0.4, 0.45098, 1)
+albedo_texture = ExtResource("2_6eq3s")
+emission_energy_multiplier = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_657j5"]
+material = SubResource("StandardMaterial3D_5j2c6")
+size = Vector2(200, 200)
 
 [node name="StandardGround" type="Node3D"]
 
@@ -23,6 +41,10 @@ transform = Transform3D(-0.899276, 0.425182, -0.102587, -0.311974, -0.459146, 0.
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.70528, -0.347993, 0.617642, 0, 0.871232, 0.490872, -0.708929, -0.346202, 0.614462, 106.95, 88.062, 110.466)
+transform = Transform3D(0.70528, -0.347993, 0.617642, 0, 0.871232, 0.490872, -0.708929, -0.346202, 0.614462, 106.95, 88.062, 107.002)
 projection = 1
-size = 46.7994
+size = 46.2064
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("PlaneMesh_657j5")
