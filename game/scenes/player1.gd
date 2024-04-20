@@ -41,3 +41,9 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		target_velocity.y = jump_impulse
 	move_and_slide()
+	
+	for index in range(get_slide_collision_count()):
+		var collision = get_slide_collision(index)
+		var box = collision.get_collider()
+		if box.has_method("player_collision"):
+			box.player_collision()
