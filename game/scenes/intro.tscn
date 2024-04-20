@@ -10,3 +10,4 @@
 [node name="Box" parent="." instance=ExtResource("2_k0n6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.78148)
 text = "Start!"
+level_file = ExtResource("1_3wsy4")
